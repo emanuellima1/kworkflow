@@ -18,11 +18,12 @@ jobs:
           sudo apt update -y
       - name: Install dependencies
         run: |
-          sudo apt install -y shunit2 bc sqlite3 bsdmainutils git \
-          tar python3-docutils pulseaudio-utils dunst sphinx-doc imagemagick \
-          graphviz dvipng python3-venv latexmk librsvg2-bin texlive-xetex \
-          python3-sphinx python3-dask-sphinx-theme python3-pip bzip2 lzip \
-          xz-utils lzop zstd bc git-email sqlite3 pv rsync ccache
+          sudo apt install -y shunit2 sqlite3 bsdmainutils \
+          python3-docutils pulseaudio-utils dunst sphinx-doc \
+          graphviz dvipng latexmk librsvg2-bin texlive-xetex \
+          python3-sphinx python3-dask-sphinx-theme lzip \
+          lzop git-email pv ccache libemail-valid-perl libmailtools-perl \
+          libauthen-sasl-perl libio-socket-ssl-perl
       - name: Prepare for tests
         run: |
           ./setup.sh --install <<< 'y'
