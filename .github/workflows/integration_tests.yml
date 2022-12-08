@@ -18,7 +18,7 @@ jobs:
           sudo apt update -y
       - name: Install dependencies
         run: |
-          sudo apt install -y shunit2 sqlite3 bsdmainutils \
+          sudo apt install -y git=2.34.1 shunit2 bsdmainutils \
           python3-docutils pulseaudio-utils dunst sphinx-doc \
           graphviz dvipng latexmk librsvg2-bin texlive-xetex \
           python3-sphinx python3-dask-sphinx-theme lzip \
